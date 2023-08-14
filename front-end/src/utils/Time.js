@@ -1,0 +1,15 @@
+export function tConvert(time) {
+  // Check correct time format and split into components
+  time = time
+    .slice(0, -3)
+    .toString()
+    .match(/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
+
+  if (time.length > 1) {
+    // If time format is correct
+    time = time.slice(1); // Remove the full string match value
+    time[5] = +time[0] < 12 ? "AM" : "PM"; // Set AM/PM
+    time[0] = +time[0] % 12 || 12; // Adjust the hours
+  }
+  return time.join(""); // return the adjusted time or original string
+}
