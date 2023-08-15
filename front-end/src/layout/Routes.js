@@ -4,11 +4,11 @@ import { Redirect, Route, Switch } from "react-router-dom";
 import Dashboard from "../dashboard/Dashboard";
 import NotFound from "./NotFound";
 import { today } from "../utils/date-time";
-import Reservation from "../reservations/newReservations";
+import Reservation from "../reservations/newReservation";
 import useQuery from "../utils/useQuery";
 import NewTable from "../tables/tables";
 import SeatRes from "../tables/Seat";
-import EditRes from "../reservations/editReservaton";
+import EditRes from "../reservations/editReservation";
 import Search from "../dashboard/Search";
 
 /**
